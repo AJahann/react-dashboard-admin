@@ -1,3 +1,4 @@
+import Badge from "../../ui/badge/Badge";
 import {
   Table,
   TableBody,
@@ -5,8 +6,6 @@ import {
   TableHeader,
   TableRow,
 } from "../../ui/table";
-
-import Badge from "../../ui/badge/Badge";
 
 interface Order {
   id: number;
@@ -158,10 +157,10 @@ export default function BasicTableOne() {
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 overflow-hidden rounded-full">
                       <img
-                        width={40}
                         height={40}
-                        src={order.user.image}
+                        width={40}
                         alt={order.user.name}
+                        src={order.user.image}
                       />
                     </div>
                     <div>
@@ -181,15 +180,15 @@ export default function BasicTableOne() {
                   <div className="flex -space-x-2">
                     {order.team.images.map((teamImage, index) => (
                       <div
-                        key={index}
                         className="w-6 h-6 overflow-hidden border-2 border-white rounded-full dark:border-gray-900"
+                        key={index}
                       >
                         <img
-                          width={24}
                           height={24}
-                          src={teamImage}
+                          width={24}
                           alt={`Team member ${index + 1}`}
                           className="w-full size-6"
+                          src={teamImage}
                         />
                       </div>
                     ))}
@@ -202,8 +201,8 @@ export default function BasicTableOne() {
                       order.status === "Active"
                         ? "success"
                         : order.status === "Pending"
-                        ? "warning"
-                        : "error"
+                          ? "warning"
+                          : "error"
                     }
                   >
                     {order.status}

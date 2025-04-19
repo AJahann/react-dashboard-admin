@@ -1,7 +1,8 @@
 import { useState } from "react";
+
+import { MoreDotIcon } from "../../icons";
 import { Dropdown } from "../ui/dropdown/Dropdown";
 import { DropdownItem } from "../ui/dropdown/DropdownItem";
-import { MoreDotIcon } from "../../icons";
 import CountryMap from "./CountryMap";
 
 export default function DemographicCard() {
@@ -30,19 +31,19 @@ export default function DemographicCard() {
             <MoreDotIcon className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 size-6" />
           </button>
           <Dropdown
+            className="w-40 p-2"
             isOpen={isOpen}
             onClose={closeDropdown}
-            className="w-40 p-2"
           >
             <DropdownItem
-              onItemClick={closeDropdown}
               className="flex w-full font-normal text-left text-gray-500 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-300"
+              onItemClick={closeDropdown}
             >
               View More
             </DropdownItem>
             <DropdownItem
-              onItemClick={closeDropdown}
               className="flex w-full font-normal text-left text-gray-500 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-300"
+              onItemClick={closeDropdown}
             >
               Delete
             </DropdownItem>
@@ -51,8 +52,8 @@ export default function DemographicCard() {
       </div>
       <div className="px-4 py-6 my-6 overflow-hidden border border-gary-200 rounded-2xl dark:border-gray-800 sm:px-6">
         <div
-          id="mapOne"
           className="mapOne map-btn -mx-4 -my-6 h-[212px] w-[252px] 2xsm:w-[307px] xsm:w-[358px] sm:-mx-6 md:w-[668px] lg:w-[634px] xl:w-[393px] 2xl:w-[554px]"
+          id="mapOne"
         >
           <CountryMap />
         </div>
@@ -62,7 +63,7 @@ export default function DemographicCard() {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="items-center w-full rounded-full max-w-8">
-              <img src="./images/country/country-01.svg" alt="usa" />
+              <img alt="usa" src="./images/country/country-01.svg" />
             </div>
             <div>
               <p className="font-semibold text-gray-800 text-theme-sm dark:text-white/90">
@@ -87,7 +88,7 @@ export default function DemographicCard() {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="items-center w-full rounded-full max-w-8">
-              <img src="./images/country/country-02.svg" alt="france" />
+              <img alt="france" src="./images/country/country-02.svg" />
             </div>
             <div>
               <p className="font-semibold text-gray-800 text-theme-sm dark:text-white/90">

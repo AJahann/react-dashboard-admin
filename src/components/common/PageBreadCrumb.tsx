@@ -22,19 +22,19 @@ const PageBreadcrumb: React.FC<BreadcrumbProps> = ({ pageTitle }) => {
             >
               Home
               <svg
-                className="stroke-current"
-                width="17"
                 height="16"
-                viewBox="0 0 17 16"
+                width="17"
+                className="stroke-current"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 17 16"
               >
                 <path
                   d="M6.0765 12.667L10.2432 8.50033L6.0765 4.33366"
                   stroke=""
-                  strokeWidth="1.2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
+                  strokeWidth="1.2"
                 />
               </svg>
             </Link>

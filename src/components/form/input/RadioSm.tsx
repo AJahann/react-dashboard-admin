@@ -19,19 +19,19 @@ const RadioSm: React.FC<RadioProps> = ({
 }) => {
   return (
     <label
-      htmlFor={id}
       className={`flex cursor-pointer select-none items-center text-sm text-gray-500 dark:text-gray-400 ${className}`}
+      htmlFor={id}
     >
       <span className="relative">
         {/* Hidden Input */}
         <input
-          type="radio"
+          checked={checked}
+          className="sr-only"
           id={id}
           name={name}
+          type="radio"
           value={value}
-          checked={checked}
           onChange={() => onChange(value)}
-          className="sr-only"
         />
         {/* Styled Radio Circle */}
         <span

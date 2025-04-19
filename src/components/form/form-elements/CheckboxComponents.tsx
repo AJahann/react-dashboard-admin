@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import ComponentCard from "../../common/ComponentCard";
 import Checkbox from "../input/Checkbox";
 
@@ -18,16 +19,16 @@ export default function CheckboxComponents() {
         <div className="flex items-center gap-3">
           <Checkbox
             checked={isCheckedTwo}
-            onChange={setIsCheckedTwo}
             label="Checked"
+            onChange={setIsCheckedTwo}
           />
         </div>
         <div className="flex items-center gap-3">
           <Checkbox
-            checked={isCheckedDisabled}
-            onChange={setIsCheckedDisabled}
             disabled
+            checked={isCheckedDisabled}
             label="Disabled"
+            onChange={setIsCheckedDisabled}
           />
         </div>
       </div>

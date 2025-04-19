@@ -1,9 +1,11 @@
+import type { ApexOptions } from "apexcharts";
+
+import { useState } from "react";
 import Chart from "react-apexcharts";
-import { ApexOptions } from "apexcharts";
+
+import { MoreDotIcon } from "../../icons";
 import { Dropdown } from "../ui/dropdown/Dropdown";
 import { DropdownItem } from "../ui/dropdown/DropdownItem";
-import { MoreDotIcon } from "../../icons";
-import { useState } from "react";
 
 export default function MonthlySalesChart() {
   const options: ApexOptions = {
@@ -111,19 +113,19 @@ export default function MonthlySalesChart() {
             <MoreDotIcon className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 size-6" />
           </button>
           <Dropdown
+            className="w-40 p-2"
             isOpen={isOpen}
             onClose={closeDropdown}
-            className="w-40 p-2"
           >
             <DropdownItem
-              onItemClick={closeDropdown}
               className="flex w-full font-normal text-left text-gray-500 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-300"
+              onItemClick={closeDropdown}
             >
               View More
             </DropdownItem>
             <DropdownItem
-              onItemClick={closeDropdown}
               className="flex w-full font-normal text-left text-gray-500 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-300"
+              onItemClick={closeDropdown}
             >
               Delete
             </DropdownItem>
@@ -133,7 +135,7 @@ export default function MonthlySalesChart() {
 
       <div className="max-w-full overflow-x-auto custom-scrollbar">
         <div className="-ml-5 min-w-[650px] xl:min-w-full pl-2">
-          <Chart options={options} series={series} type="bar" height={180} />
+          <Chart height={180} series={series} type="bar" options={options} />
         </div>
       </div>
     </div>

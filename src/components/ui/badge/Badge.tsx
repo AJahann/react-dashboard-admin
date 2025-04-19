@@ -1,13 +1,13 @@
 type BadgeVariant = "light" | "solid";
-type BadgeSize = "sm" | "md";
+type BadgeSize = "md" | "sm";
 type BadgeColor =
-  | "primary"
-  | "success"
+  | "dark"
   | "error"
-  | "warning"
   | "info"
   | "light"
-  | "dark";
+  | "primary"
+  | "success"
+  | "warning";
 
 interface BadgeProps {
   variant?: BadgeVariant; // Light or solid variant

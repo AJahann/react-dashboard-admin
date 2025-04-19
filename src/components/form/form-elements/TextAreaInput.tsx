@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import ComponentCard from "../../common/ComponentCard";
 import TextArea from "../input/TextArea";
 import Label from "../Label";
@@ -22,18 +23,18 @@ export default function TextAreaInput() {
         {/* Disabled TextArea */}
         <div>
           <Label>Description</Label>
-          <TextArea rows={6} disabled />
+          <TextArea disabled rows={6} />
         </div>
 
         {/* Error TextArea */}
         <div>
           <Label>Description</Label>
           <TextArea
-            rows={6}
+            hint="Please enter a valid message."
             value={messageTwo}
             error
             onChange={(value) => setMessageTwo(value)}
-            hint="Please enter a valid message."
+            rows={6}
           />
         </div>
       </div>

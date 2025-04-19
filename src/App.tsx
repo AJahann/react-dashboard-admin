@@ -1,66 +1,65 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router";
+import { Route, BrowserRouter as Router, Routes } from "react-router";
+
+import { ScrollToTop } from "./components/common/ScrollToTop";
+import AppLayout from "./layout/AppLayout";
 import SignIn from "./pages/AuthPages/SignIn";
 import SignUp from "./pages/AuthPages/SignUp";
-import NotFound from "./pages/OtherPage/NotFound";
-import UserProfiles from "./pages/UserProfiles";
-import Videos from "./pages/UiElements/Videos";
-import Images from "./pages/UiElements/Images";
-import Alerts from "./pages/UiElements/Alerts";
-import Badges from "./pages/UiElements/Badges";
-import Avatars from "./pages/UiElements/Avatars";
-import Buttons from "./pages/UiElements/Buttons";
-import LineChart from "./pages/Charts/LineChart";
-import BarChart from "./pages/Charts/BarChart";
-import Calendar from "./pages/Calendar";
-import BasicTables from "./pages/Tables/BasicTables";
-import FormElements from "./pages/Forms/FormElements";
 import Blank from "./pages/Blank";
-import AppLayout from "./layout/AppLayout";
-import { ScrollToTop } from "./components/common/ScrollToTop";
+import Calendar from "./pages/Calendar";
+import BarChart from "./pages/Charts/BarChart";
+import LineChart from "./pages/Charts/LineChart";
 import Home from "./pages/Dashboard/Home";
+import FormElements from "./pages/Forms/FormElements";
+import NotFound from "./pages/OtherPage/NotFound";
+import BasicTables from "./pages/Tables/BasicTables";
+import Alerts from "./pages/UiElements/Alerts";
+import Avatars from "./pages/UiElements/Avatars";
+import Badges from "./pages/UiElements/Badges";
+import Buttons from "./pages/UiElements/Buttons";
+import Images from "./pages/UiElements/Images";
+import Videos from "./pages/UiElements/Videos";
+import UserProfiles from "./pages/UserProfiles";
 
 export default function App() {
   return (
-    <>
-      <Router>
-        <ScrollToTop />
-        <Routes>
-          {/* Dashboard Layout */}
-          <Route element={<AppLayout />}>
-            <Route index path="/" element={<Home />} />
+    <Router>
+      <ScrollToTop />
+      <Routes>
+        {/* Dashboard Layout */}
+        <Route element={<AppLayout />}>
+          <Route index element={<Home />} path="/" />
 
-            {/* Others Page */}
-            <Route path="/profile" element={<UserProfiles />} />
-            <Route path="/calendar" element={<Calendar />} />
-            <Route path="/blank" element={<Blank />} />
+          {/* Others Page */}
+          <Route element={<UserProfiles />} path="/profile" />
+          <Route element={<Calendar />} path="/calendar" />
+          <Route element={<Blank />} path="/blank" />
 
-            {/* Forms */}
-            <Route path="/form-elements" element={<FormElements />} />
+          {/* Forms */}
+          <Route element={<FormElements />} path="/form-elements" />
 
-            {/* Tables */}
-            <Route path="/basic-tables" element={<BasicTables />} />
+          {/* Tables */}
+          <Route element={<BasicTables />} path="/basic-tables" />
 
-            {/* Ui Elements */}
-            <Route path="/alerts" element={<Alerts />} />
-            <Route path="/avatars" element={<Avatars />} />
-            <Route path="/badge" element={<Badges />} />
-            <Route path="/buttons" element={<Buttons />} />
-            <Route path="/images" element={<Images />} />
-            <Route path="/videos" element={<Videos />} />
+          {/* Ui Elements */}
+          <Route element={<Alerts />} path="/alerts" />
+          <Route element={<Avatars />} path="/avatars" />
+          <Route element={<Badges />} path="/badge" />
+          <Route element={<Buttons />} path="/buttons" />
+          <Route element={<Images />} path="/images" />
+          <Route element={<Videos />} path="/videos" />
 
-            {/* Charts */}
-            <Route path="/line-chart" element={<LineChart />} />
-            <Route path="/bar-chart" element={<BarChart />} />
-          </Route>
+          {/* Charts */}
+          <Route element={<LineChart />} path="/line-chart" />
+          <Route element={<BarChart />} path="/bar-chart" />
+        </Route>
 
-          {/* Auth Layout */}
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
+        {/* Auth Layout */}
+        <Route element={<SignIn />} path="/signin" />
+        <Route element={<SignUp />} path="/signup" />
 
-          {/* Fallback Route */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Router>
-    </>
+        {/* Fallback Route */}
+        <Route element={<NotFound />} path="*" />
+      </Routes>
+    </Router>
   );
 }

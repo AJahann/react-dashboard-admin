@@ -2,11 +2,11 @@ import type React from "react";
 import type { FC } from "react";
 
 interface InputProps {
-  type?: "text" | "number" | "email" | "password" | "date" | "time" | string;
+  type?: string | "date" | "email" | "number" | "password" | "text" | "time";
   id?: string;
   name?: string;
   placeholder?: string;
-  value?: string | number;
+  value?: number | string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   className?: string;
   min?: string;
@@ -49,17 +49,17 @@ const Input: FC<InputProps> = ({
   return (
     <div className="relative">
       <input
-        type={type}
+        className={inputClasses}
+        disabled={disabled}
         id={id}
+        max={max}
+        min={min}
         name={name}
-        placeholder={placeholder}
+        step={step}
+        type={type}
         value={value}
         onChange={onChange}
-        min={min}
-        max={max}
-        step={step}
-        disabled={disabled}
-        className={inputClasses}
+        placeholder={placeholder}
       />
 
       {hint && (
@@ -68,8 +68,8 @@ const Input: FC<InputProps> = ({
             error
               ? "text-error-500"
               : success
-              ? "text-success-500"
-              : "text-gray-500"
+                ? "text-success-500"
+                : "text-gray-500"
           }`}
         >
           {hint}

@@ -1,9 +1,9 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 interface ButtonProps {
   children: ReactNode; // Button text or content
-  size?: "sm" | "md"; // Button size
-  variant?: "primary" | "outline"; // Button variant
+  size?: "md" | "sm"; // Button size
+  variant?: "outline" | "primary"; // Button variant
   startIcon?: ReactNode; // Icon before the text
   endIcon?: ReactNode; // Icon after the text
   onClick?: () => void; // Click handler
@@ -37,13 +37,13 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <button
+      disabled={disabled}
+      onClick={onClick}
       className={`inline-flex items-center justify-center gap-2 rounded-lg transition ${className} ${
         sizeClasses[size]
       } ${variantClasses[variant]} ${
         disabled ? "cursor-not-allowed opacity-50" : ""
       }`}
-      onClick={onClick}
-      disabled={disabled}
     >
       {startIcon && <span className="flex items-center">{startIcon}</span>}
       {children}

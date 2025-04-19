@@ -8,32 +8,24 @@ export default function ToggleSwitch() {
   return (
     <ComponentCard title="Toggle switch input">
       <div className="flex gap-4">
-        <Switch
-          label="Default"
-          defaultChecked={true}
-          onChange={handleSwitchChange}
-        />
-        <Switch
-          label="Checked"
-          defaultChecked={true}
-          onChange={handleSwitchChange}
-        />
-        <Switch label="Disabled" disabled={true} />
+        <Switch defaultChecked label="Default" onChange={handleSwitchChange} />
+        <Switch defaultChecked label="Checked" onChange={handleSwitchChange} />
+        <Switch disabled label="Disabled" />
       </div>{" "}
       <div className="flex gap-4">
         <Switch
+          defaultChecked
           label="Default"
-          defaultChecked={true}
-          onChange={handleSwitchChange}
           color="gray"
+          onChange={handleSwitchChange}
         />
         <Switch
+          defaultChecked
           label="Checked"
-          defaultChecked={true}
-          onChange={handleSwitchChange}
           color="gray"
+          onChange={handleSwitchChange}
         />
-        <Switch label="Disabled" disabled={true} color="gray" />
+        <Switch disabled label="Disabled" color="gray" />
       </div>
     </ComponentCard>
   );

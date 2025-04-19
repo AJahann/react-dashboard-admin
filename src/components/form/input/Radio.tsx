@@ -29,14 +29,14 @@ const Radio: React.FC<RadioProps> = ({
       } ${className}`}
     >
       <input
+        checked={checked}
+        className="sr-only"
+        disabled={disabled} // Disable input
         id={id}
         name={name}
         type="radio"
         value={value}
-        checked={checked}
         onChange={() => !disabled && onChange(value)} // Prevent onChange when disabled
-        className="sr-only"
-        disabled={disabled} // Disable input
       />
       <span
         className={`flex h-5 w-5 items-center justify-center rounded-full border-[1.25px] ${

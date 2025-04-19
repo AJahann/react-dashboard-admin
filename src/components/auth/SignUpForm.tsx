@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router";
+
 import { ChevronLeftIcon, EyeCloseIcon, EyeIcon } from "../../icons";
-import Label from "../form/Label";
-import Input from "../form/input/InputField";
 import Checkbox from "../form/input/Checkbox";
+import Input from "../form/input/InputField";
+import Label from "../form/Label";
 
 export default function SignUpForm() {
   const [showPassword, setShowPassword] = useState(false);
@@ -12,8 +13,8 @@ export default function SignUpForm() {
     <div className="flex flex-col flex-1 w-full overflow-y-auto lg:w-1/2 no-scrollbar">
       <div className="w-full max-w-md mx-auto mb-5 sm:pt-10">
         <Link
-          to="/"
           className="inline-flex items-center text-sm text-gray-500 transition-colors hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
+          to="/"
         >
           <ChevronLeftIcon className="size-5" />
           Back to dashboard
@@ -33,11 +34,11 @@ export default function SignUpForm() {
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-5">
               <button className="inline-flex items-center justify-center gap-3 py-3 text-sm font-normal text-gray-700 transition-colors bg-gray-100 rounded-lg px-7 hover:bg-gray-200 hover:text-gray-800 dark:bg-white/5 dark:text-white/90 dark:hover:bg-white/10">
                 <svg
-                  width="20"
                   height="20"
-                  viewBox="0 0 20 20"
+                  width="20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
                 >
                   <path
                     d="M18.7511 10.1944C18.7511 9.47495 18.6915 8.94995 18.5626 8.40552H10.1797V11.6527H15.1003C15.0011 12.4597 14.4654 13.675 13.2749 14.4916L13.2582 14.6003L15.9087 16.6126L16.0924 16.6305C17.7788 15.1041 18.7511 12.8583 18.7511 10.1944Z"
@@ -60,12 +61,12 @@ export default function SignUpForm() {
               </button>
               <button className="inline-flex items-center justify-center gap-3 py-3 text-sm font-normal text-gray-700 transition-colors bg-gray-100 rounded-lg px-7 hover:bg-gray-200 hover:text-gray-800 dark:bg-white/5 dark:text-white/90 dark:hover:bg-white/10">
                 <svg
+                  height="20"
                   width="21"
                   className="fill-current"
-                  height="20"
-                  viewBox="0 0 21 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 21 20"
                 >
                   <path d="M15.6705 1.875H18.4272L12.4047 8.75833L19.4897 18.125H13.9422L9.59717 12.4442L4.62554 18.125H1.86721L8.30887 10.7625L1.51221 1.875H7.20054L11.128 7.0675L15.6705 1.875ZM14.703 16.475H16.2305L6.37054 3.43833H4.73137L14.703 16.475Z" />
                 </svg>
@@ -91,9 +92,9 @@ export default function SignUpForm() {
                       First Name<span className="text-error-500">*</span>
                     </Label>
                     <Input
-                      type="text"
                       id="fname"
                       name="fname"
+                      type="text"
                       placeholder="Enter your first name"
                     />
                   </div>
@@ -103,9 +104,9 @@ export default function SignUpForm() {
                       Last Name<span className="text-error-500">*</span>
                     </Label>
                     <Input
-                      type="text"
                       id="lname"
                       name="lname"
+                      type="text"
                       placeholder="Enter your last name"
                     />
                   </div>
@@ -116,9 +117,9 @@ export default function SignUpForm() {
                     Email<span className="text-error-500">*</span>
                   </Label>
                   <Input
-                    type="email"
                     id="email"
                     name="email"
+                    type="email"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -129,12 +130,12 @@ export default function SignUpForm() {
                   </Label>
                   <div className="relative">
                     <Input
-                      placeholder="Enter your password"
                       type={showPassword ? "text" : "password"}
+                      placeholder="Enter your password"
                     />
                     <span
-                      onClick={() => setShowPassword(!showPassword)}
                       className="absolute z-30 -translate-y-1/2 cursor-pointer right-4 top-1/2"
+                      onClick={() => setShowPassword(!showPassword)}
                     >
                       {showPassword ? (
                         <EyeIcon className="fill-gray-500 dark:fill-gray-400 size-5" />
@@ -147,8 +148,8 @@ export default function SignUpForm() {
                 {/* <!-- Checkbox --> */}
                 <div className="flex items-center gap-3">
                   <Checkbox
-                    className="w-5 h-5"
                     checked={isChecked}
+                    className="w-5 h-5"
                     onChange={setIsChecked}
                   />
                   <p className="inline-block font-normal text-gray-500 dark:text-gray-400">
@@ -173,10 +174,10 @@ export default function SignUpForm() {
 
             <div className="mt-5">
               <p className="text-sm font-normal text-center text-gray-700 dark:text-gray-400 sm:text-start">
-                Already have an account? {""}
+                Already have an account?
                 <Link
-                  to="/signin"
                   className="text-brand-500 hover:text-brand-600 dark:text-brand-400"
+                  to="/signin"
                 >
                   Sign In
                 </Link>

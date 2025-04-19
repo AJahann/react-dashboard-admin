@@ -1,8 +1,8 @@
 interface AvatarProps {
   src: string; // URL of the avatar image
   alt?: string; // Alt text for the avatar
-  size?: "xsmall" | "small" | "medium" | "large" | "xlarge" | "xxlarge"; // Avatar size
-  status?: "online" | "offline" | "busy" | "none"; // Status indicator
+  size?: "large" | "medium" | "small" | "xlarge" | "xsmall" | "xxlarge"; // Avatar size
+  status?: "busy" | "none" | "offline" | "online"; // Status indicator
 }
 
 const sizeClasses = {
@@ -38,7 +38,7 @@ const Avatar: React.FC<AvatarProps> = ({
   return (
     <div className={`relative  rounded-full ${sizeClasses[size]}`}>
       {/* Avatar Image */}
-      <img src={src} alt={alt} className="object-cover rounded-full" />
+      <img alt={alt} className="object-cover rounded-full" src={src} />
 
       {/* Status Indicator */}
       {status !== "none" && (

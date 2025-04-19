@@ -1,8 +1,9 @@
 import { useState } from "react";
+
 import ComponentCard from "../../common/ComponentCard";
 import Label from "../Label";
-import Select from "../Select";
 import MultiSelect from "../MultiSelect";
+import Select from "../Select";
 
 export default function SelectInputs() {
   const options = [
@@ -28,18 +29,18 @@ export default function SelectInputs() {
         <div>
           <Label>Select Input</Label>
           <Select
+            className="dark:bg-dark-900"
+            onChange={handleSelectChange}
             options={options}
             placeholder="Select Option"
-            onChange={handleSelectChange}
-            className="dark:bg-dark-900"
           />
         </div>
         <div>
           <MultiSelect
-            label="Multiple Select Options"
-            options={multiOptions}
             defaultSelected={["1", "3"]}
+            label="Multiple Select Options"
             onChange={(values) => setSelectedValues(values)}
+            options={multiOptions}
           />
           <p className="sr-only">
             Selected Values: {selectedValues.join(", ")}

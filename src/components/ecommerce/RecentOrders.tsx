@@ -1,3 +1,4 @@
+import Badge from "../ui/badge/Badge";
 import {
   Table,
   TableBody,
@@ -5,7 +6,6 @@ import {
   TableHeader,
   TableRow,
 } from "../ui/table";
-import Badge from "../ui/badge/Badge";
 
 // Define the TypeScript interface for the table rows
 interface Product {
@@ -16,7 +16,7 @@ interface Product {
   price: string; // Price of the product (as a string with currency symbol)
   // status: string; // Status of the product
   image: string; // URL or path to the product image
-  status: "Delivered" | "Pending" | "Canceled"; // Status of the product
+  status: "Canceled" | "Delivered" | "Pending"; // Status of the product
 }
 
 // Define the table data using the interface
@@ -81,26 +81,26 @@ export default function RecentOrders() {
         <div className="flex items-center gap-3">
           <button className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-theme-sm font-medium text-gray-700 shadow-theme-xs hover:bg-gray-50 hover:text-gray-800 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-white/[0.03] dark:hover:text-gray-200">
             <svg
-              className="stroke-current fill-white dark:fill-gray-800"
-              width="20"
               height="20"
-              viewBox="0 0 20 20"
+              width="20"
+              className="stroke-current fill-white dark:fill-gray-800"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
             >
               <path
                 d="M2.29004 5.90393H17.7067"
                 stroke=""
-                strokeWidth="1.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                strokeWidth="1.5"
               />
               <path
                 d="M17.7075 14.0961H2.29085"
                 stroke=""
-                strokeWidth="1.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                strokeWidth="1.5"
               />
               <path
                 d="M12.0826 3.33331C13.5024 3.33331 14.6534 4.48431 14.6534 5.90414C14.6534 7.32398 13.5024 8.47498 12.0826 8.47498C10.6627 8.47498 9.51172 7.32398 9.51172 5.90415C9.51172 4.48432 10.6627 3.33331 12.0826 3.33331Z"
@@ -158,14 +158,14 @@ export default function RecentOrders() {
 
           <TableBody className="divide-y divide-gray-100 dark:divide-gray-800">
             {tableData.map((product) => (
-              <TableRow key={product.id} className="">
+              <TableRow className="" key={product.id}>
                 <TableCell className="py-3">
                   <div className="flex items-center gap-3">
                     <div className="h-[50px] w-[50px] overflow-hidden rounded-md">
                       <img
-                        src={product.image}
-                        className="h-[50px] w-[50px]"
                         alt={product.name}
+                        className="h-[50px] w-[50px]"
+                        src={product.image}
                       />
                     </div>
                     <div>
@@ -191,8 +191,8 @@ export default function RecentOrders() {
                       product.status === "Delivered"
                         ? "success"
                         : product.status === "Pending"
-                        ? "warning"
-                        : "error"
+                          ? "warning"
+                          : "error"
                     }
                   >
                     {product.status}

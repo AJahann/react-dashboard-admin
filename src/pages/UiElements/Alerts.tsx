@@ -1,7 +1,7 @@
-import PageBreadcrumb from "../../components/common/PageBreadCrumb";
 import ComponentCard from "../../components/common/ComponentCard";
-import Alert from "../../components/ui/alert/Alert";
+import PageBreadcrumb from "../../components/common/PageBreadCrumb";
 import PageMeta from "../../components/common/PageMeta";
+import Alert from "../../components/ui/alert/Alert";
 
 export default function Alerts() {
   return (
@@ -14,65 +14,65 @@ export default function Alerts() {
       <div className="space-y-5 sm:space-y-6">
         <ComponentCard title="Success Alert">
           <Alert
-            variant="success"
-            title="Success Message"
-            message="Be cautious when performing this action."
-            showLink={true}
             linkHref="/"
             linkText="Learn more"
+            message="Be cautious when performing this action."
+            title="Success Message"
+            variant="success"
+            showLink
           />
           <Alert
-            variant="success"
-            title="Success Message"
             message="Be cautious when performing this action."
+            title="Success Message"
+            variant="success"
             showLink={false}
           />
         </ComponentCard>
         <ComponentCard title="Warning Alert">
           <Alert
-            variant="warning"
-            title="Warning Message"
-            message="Be cautious when performing this action."
-            showLink={true}
             linkHref="/"
             linkText="Learn more"
+            message="Be cautious when performing this action."
+            title="Warning Message"
+            variant="warning"
+            showLink
           />
           <Alert
-            variant="warning"
-            title="Warning Message"
             message="Be cautious when performing this action."
+            title="Warning Message"
+            variant="warning"
             showLink={false}
           />
         </ComponentCard>{" "}
         <ComponentCard title="Error Alert">
           <Alert
-            variant="error"
-            title="Error Message"
-            message="Be cautious when performing this action."
-            showLink={true}
             linkHref="/"
             linkText="Learn more"
+            message="Be cautious when performing this action."
+            title="Error Message"
+            variant="error"
+            showLink
           />
           <Alert
-            variant="error"
-            title="Error Message"
             message="Be cautious when performing this action."
+            title="Error Message"
+            variant="error"
             showLink={false}
           />
         </ComponentCard>{" "}
         <ComponentCard title="Info Alert">
           <Alert
-            variant="info"
-            title="Info Message"
-            message="Be cautious when performing this action."
-            showLink={true}
             linkHref="/"
             linkText="Learn more"
+            message="Be cautious when performing this action."
+            title="Info Message"
+            variant="info"
+            showLink
           />
           <Alert
-            variant="info"
-            title="Info Message"
             message="Be cautious when performing this action."
+            title="Info Message"
+            variant="info"
             showLink={false}
           />
         </ComponentCard>

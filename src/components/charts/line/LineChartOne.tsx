@@ -1,5 +1,6 @@
+import type { ApexOptions } from "apexcharts";
+
 import Chart from "react-apexcharts";
-import { ApexOptions } from "apexcharts";
 
 export default function LineChartOne() {
   const options: ApexOptions = {
@@ -112,8 +113,8 @@ export default function LineChartOne() {
   ];
   return (
     <div className="max-w-full overflow-x-auto custom-scrollbar">
-      <div id="chartEight" className="min-w-[1000px]">
-        <Chart options={options} series={series} type="area" height={310} />
+      <div className="min-w-[1000px]" id="chartEight">
+        <Chart height={310} series={series} type="area" options={options} />
       </div>
     </div>
   );
