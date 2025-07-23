@@ -1,12 +1,8 @@
 import type { ApexOptions } from "apexcharts";
 
-import { useState } from "react";
 import Chart from "react-apexcharts";
 
-import { MoreDotIcon } from "../../icons";
-import { Dropdown } from "../ui/dropdown/Dropdown";
-import { DropdownItem } from "../ui/dropdown/DropdownItem";
-
+// eslint-disable-next-line max-lines-per-function
 export default function MonthlyTarget() {
   const series = [75.55];
   const options: ApexOptions = {
@@ -40,6 +36,7 @@ export default function MonthlyTarget() {
             fontWeight: "600",
             offsetY: -40,
             color: "#1D2939",
+            // eslint-disable-next-line func-names
             formatter: function (val) {
               return `${val}%`;
             },
@@ -56,15 +53,7 @@ export default function MonthlyTarget() {
     },
     labels: ["Progress"],
   };
-  const [isOpen, setIsOpen] = useState(false);
 
-  function toggleDropdown() {
-    setIsOpen(!isOpen);
-  }
-
-  function closeDropdown() {
-    setIsOpen(false);
-  }
   return (
     <div className="rounded-2xl border border-gray-200 bg-gray-100 dark:border-gray-800 dark:bg-white/[0.03]">
       <div className="px-5 pt-5 bg-white shadow-default rounded-2xl pb-11 dark:bg-gray-900 sm:px-6 sm:pt-6">
@@ -76,29 +65,6 @@ export default function MonthlyTarget() {
             <p className="mt-1 text-gray-500 text-theme-sm dark:text-gray-400">
               Target you’ve set for each month
             </p>
-          </div>
-          <div className="relative inline-block">
-            <button className="dropdown-toggle" onClick={toggleDropdown}>
-              <MoreDotIcon className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 size-6" />
-            </button>
-            <Dropdown
-              className="w-40 p-2"
-              isOpen={isOpen}
-              onClose={closeDropdown}
-            >
-              <DropdownItem
-                className="flex w-full font-normal text-left text-gray-500 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-300"
-                onItemClick={closeDropdown}
-              >
-                View More
-              </DropdownItem>
-              <DropdownItem
-                className="flex w-full font-normal text-left text-gray-500 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-300"
-                onItemClick={closeDropdown}
-              >
-                Delete
-              </DropdownItem>
-            </Dropdown>
           </div>
         </div>
         <div className="relative ">
