@@ -1,6 +1,7 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router";
 
 import { ScrollToTop } from "./components/common/ScrollToTop";
+import { ProtectedRoute } from "./components/routing/ProtectedRoute";
 import AppLayout from "./layout/AppLayout";
 import SignIn from "./pages/AuthPages/SignIn";
 import SignUp from "./pages/AuthPages/SignUp";
@@ -26,31 +27,33 @@ export default function App() {
       <ScrollToTop />
       <Routes>
         {/* Dashboard Layout */}
-        <Route element={<AppLayout />}>
-          <Route index element={<Home />} path="/" />
+        <Route element={<ProtectedRoute />}>
+          <Route element={<AppLayout />}>
+            <Route index element={<Home />} path="/" />
 
-          {/* Others Page */}
-          <Route element={<UserProfiles />} path="/profile" />
-          <Route element={<Calendar />} path="/calendar" />
-          <Route element={<Blank />} path="/blank" />
+            {/* Others Page */}
+            <Route element={<UserProfiles />} path="/profile" />
+            <Route element={<Calendar />} path="/calendar" />
+            <Route element={<Blank />} path="/blank" />
 
-          {/* Forms */}
-          <Route element={<FormElements />} path="/form-elements" />
+            {/* Forms */}
+            <Route element={<FormElements />} path="/form-elements" />
 
-          {/* Tables */}
-          <Route element={<BasicTables />} path="/basic-tables" />
+            {/* Tables */}
+            <Route element={<BasicTables />} path="/basic-tables" />
 
-          {/* Ui Elements */}
-          <Route element={<Alerts />} path="/alerts" />
-          <Route element={<Avatars />} path="/avatars" />
-          <Route element={<Badges />} path="/badge" />
-          <Route element={<Buttons />} path="/buttons" />
-          <Route element={<Images />} path="/images" />
-          <Route element={<Videos />} path="/videos" />
+            {/* Ui Elements */}
+            <Route element={<Alerts />} path="/alerts" />
+            <Route element={<Avatars />} path="/avatars" />
+            <Route element={<Badges />} path="/badge" />
+            <Route element={<Buttons />} path="/buttons" />
+            <Route element={<Images />} path="/images" />
+            <Route element={<Videos />} path="/videos" />
 
-          {/* Charts */}
-          <Route element={<LineChart />} path="/line-chart" />
-          <Route element={<BarChart />} path="/bar-chart" />
+            {/* Charts */}
+            <Route element={<LineChart />} path="/line-chart" />
+            <Route element={<BarChart />} path="/bar-chart" />
+          </Route>
         </Route>
 
         {/* Auth Layout */}
