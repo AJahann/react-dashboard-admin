@@ -7,18 +7,30 @@ import {
   BoxIconLine,
   GroupIcon,
 } from "../../icons";
+import { useOrderCount } from "../../libs/data-layer/orders";
 import { useTotalUsersCount } from "../../libs/data-layer/users";
 import { SmallLoadingSpinner } from "../common/LoadingSpinner";
 import Badge from "../ui/badge/Badge";
 
 export default function EcommerceMetrics() {
   const { total, isLoading, error } = useTotalUsersCount();
+  const {
+    count: orderCount,
+    isLoading: orderCountLoading,
+    error: orderCountError,
+  } = useOrderCount();
 
   useEffect(() => {
     if (error?.message) {
       toast.error(error.message);
     }
   }, [error?.message]);
+
+  useEffect(() => {
+    if (orderCountError?.message) {
+      toast.error(orderCountError.message);
+    }
+  }, [orderCountError]);
 
   return (
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6">
@@ -56,7 +68,7 @@ export default function EcommerceMetrics() {
               Orders
             </span>
             <h4 className="mt-2 font-bold text-gray-800 text-title-sm dark:text-white/90">
-              0
+              {orderCountLoading ? <SmallLoadingSpinner /> : orderCount}
             </h4>
           </div>
 
