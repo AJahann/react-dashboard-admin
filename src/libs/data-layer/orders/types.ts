@@ -30,6 +30,8 @@ interface OrderWithItems {
   }[];
 }
 
+export type OrderItem = OrderWithItems["items"][0];
+
 export interface OrderCountResponse {
   count: number;
 }
@@ -42,7 +44,7 @@ export interface UseOrderCountReturn {
 }
 
 export interface UseRecentOrdersReturn {
-  orders: OrderWithItems[];
+  orders: OrderItem[];
   isLoading: boolean;
   isError: boolean;
   error: Error | null;
