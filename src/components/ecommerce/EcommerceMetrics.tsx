@@ -1,12 +1,25 @@
+import { useEffect } from "react";
+import { toast } from "react-toastify";
+
 import {
   ArrowDownIcon,
   ArrowUpIcon,
   BoxIconLine,
   GroupIcon,
 } from "../../icons";
+import { useTotalUsersCount } from "../../libs/data-layer/users";
+import { SmallLoadingSpinner } from "../common/LoadingSpinner";
 import Badge from "../ui/badge/Badge";
 
 export default function EcommerceMetrics() {
+  const { total, isLoading, error } = useTotalUsersCount();
+
+  useEffect(() => {
+    if (error?.message) {
+      toast.error(error.message);
+    }
+  }, [error?.message]);
+
   return (
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6">
       {/* <!-- Metric Item Start --> */}
@@ -21,7 +34,7 @@ export default function EcommerceMetrics() {
               Customers
             </span>
             <h4 className="mt-2 font-bold text-gray-800 text-title-sm dark:text-white/90">
-              0
+              {isLoading ? <SmallLoadingSpinner /> : total}
             </h4>
           </div>
           <Badge color="success">

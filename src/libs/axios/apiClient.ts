@@ -11,7 +11,7 @@ export const mutationFn = async <T>({
   data,
 }: {
   url: string;
-  method?: "PATCH" | "POST" | "PUT";
+  method?: "DELETE" | "PATCH" | "POST" | "PUT";
   data?: unknown;
 }): Promise<T> => {
   const response = await apiClient.request<T>({ url, method, data });
