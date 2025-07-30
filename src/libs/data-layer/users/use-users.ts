@@ -1,14 +1,21 @@
 import { useQuery } from "@tanstack/react-query";
 
-import type { PaginatedUsers, UseUsersOptions, UseUsersReturn } from "./types";
+import type {
+  PaginatedUsers,
+  User,
+  UseUsersOptions,
+  UseUsersReturn,
+} from "./types";
 
 import { fetcher } from "../../axios/apiClient";
+
+type PaginatedWithUsers = PaginatedUsers & { users: User[] };
 
 export const useUsers = ({
   page = 1,
   limit = 30,
 }: UseUsersOptions = {}): UseUsersReturn => {
-  const { data, isLoading, error } = useQuery<PaginatedUsers>({
+  const { data, isLoading, error } = useQuery<PaginatedWithUsers>({
     queryKey: ["users", "list", page, limit],
     queryFn: () => fetcher(`/admin/users?page=${page}&limit=${limit}`),
     staleTime: 1000 * 60 * 5,

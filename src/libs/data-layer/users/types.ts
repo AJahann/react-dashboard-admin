@@ -6,6 +6,7 @@ interface CreateUserDto {
 
 interface UpdateUserDto {
   name?: string;
+  phone?: string;
   password?: string;
 }
 
@@ -56,7 +57,6 @@ interface UserResponseDto {
 }
 
 interface UserPaginatedResponse {
-  users: UserResponseDto[];
   total: number;
   page: number;
   limit: number;
