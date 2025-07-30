@@ -20,6 +20,7 @@ import Buttons from "./pages/UiElements/Buttons";
 import Images from "./pages/UiElements/Images";
 import Videos from "./pages/UiElements/Videos";
 import UserProfiles from "./pages/UserProfiles";
+import { UsersPage } from "./pages/Users";
 
 export default function App() {
   return (
@@ -30,6 +31,7 @@ export default function App() {
         <Route element={<ProtectedRoute />}>
           <Route element={<AppLayout />}>
             <Route index element={<Home />} path="/" />
+            <Route index element={<UsersPage />} path="/users" />
 
             {/* Others Page */}
             <Route element={<UserProfiles />} path="/profile" />
