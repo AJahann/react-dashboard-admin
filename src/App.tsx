@@ -11,6 +11,7 @@ import BarChart from "./pages/Charts/BarChart";
 import LineChart from "./pages/Charts/LineChart";
 import Home from "./pages/Dashboard/Home";
 import FormElements from "./pages/Forms/FormElements";
+import { GoldActions, GoldHistory } from "./pages/GoldActions";
 import NotFound from "./pages/OtherPage/NotFound";
 import BasicTables from "./pages/Tables/BasicTables";
 import Alerts from "./pages/UiElements/Alerts";
@@ -32,6 +33,8 @@ export default function App() {
           <Route element={<AppLayout />}>
             <Route index element={<Home />} path="/" />
             <Route index element={<UsersPage />} path="/users" />
+            <Route index element={<GoldActions />} path="/gold-actions" />
+            <Route index element={<GoldHistory />} path="/gold-history" />
 
             {/* Others Page */}
             <Route element={<UserProfiles />} path="/profile" />

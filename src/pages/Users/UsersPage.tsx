@@ -50,7 +50,7 @@ const UsersTable = ({ users }: UsersTable) => {
 
         <TableBody className="divide-y divide-gray-100 dark:divide-gray-800">
           {users.map((user) => (
-            <TableRow className="" key={user.id}>
+            <TableRow className="[&>td]:px-3" key={user.id}>
               <TableCell className="py-3">
                 <div className="flex items-center gap-3">
                   <div className="h-[38px] w-[38px] overflow-hidden rounded-md">
@@ -78,7 +78,7 @@ const UsersTable = ({ users }: UsersTable) => {
                 }).format(user.wallet?.goldAmount ?? 0),
               ].map((cell) => (
                 <TableCell
-                  className="py-3 text-gray-500 text-theme-sm dark:text-gray-400 text-center"
+                  className="py-3 text-nowrap text-gray-500 text-theme-sm dark:text-gray-400 text-center"
                   key={cell}
                 >
                   {cell}
@@ -134,7 +134,7 @@ export function UsersPage() {
           <SmallLoadingSpinner className="mx-auto w-10 h-10 mt-4" />
         ) : (
           <>
-            <div className="max-w-full overflow-x-auto">
+            <div className="">
               <div className="flex justify-between items-center pb-4">
                 <h3 className=" font-semibold py-2 text-gray-800 text-theme-xl dark:text-white/90 sm:text-2xl">
                   Users List
@@ -148,7 +148,10 @@ export function UsersPage() {
                   Add New User
                 </Button>
               </div>
-              <UsersTable users={users} />
+
+              <div className="max-w-full overflow-x-auto">
+                <UsersTable users={users} />
+              </div>
             </div>
 
             <Pagination

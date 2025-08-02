@@ -6,6 +6,7 @@ import { useSidebar } from "../context/SidebarContext";
 import {
   BoxCubeIcon,
   ChevronDownIcon,
+  DollarLineIcon,
   GridIcon,
   HorizontaLDots,
   InfoIcon,
@@ -34,12 +35,17 @@ const navItems: NavItem[] = [
     path: "/users",
   },
   {
+    name: "Gold",
+    icon: <DollarLineIcon />,
+    subItems: [
+      { name: "Actions", path: "/gold-actions", pro: false },
+      { name: "History", path: "/gold-history", pro: false },
+    ],
+  },
+  {
     name: "Transactions",
     icon: <TableIcon />,
-    subItems: [
-      { name: "Transactions", path: "/transactions", pro: false },
-      { name: "Gold actions", path: "/gold-action", pro: false },
-    ],
+    subItems: [{ name: "Transactions", path: "/transactions", pro: false }],
   },
   {
     name: "Products",
