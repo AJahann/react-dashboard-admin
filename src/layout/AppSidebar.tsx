@@ -35,17 +35,17 @@ const navItems: NavItem[] = [
     path: "/users",
   },
   {
+    name: "Transactions",
+    icon: <TableIcon />,
+    path: "/transactions",
+  },
+  {
     name: "Gold",
     icon: <DollarLineIcon />,
     subItems: [
       { name: "Actions", path: "/gold-actions", pro: false },
       { name: "History", path: "/gold-history", pro: false },
     ],
-  },
-  {
-    name: "Transactions",
-    icon: <TableIcon />,
-    subItems: [{ name: "Transactions", path: "/transactions", pro: false }],
   },
   {
     name: "Products",

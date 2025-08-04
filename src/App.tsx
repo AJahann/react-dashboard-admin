@@ -14,6 +14,7 @@ import FormElements from "./pages/Forms/FormElements";
 import { GoldActions, GoldHistory } from "./pages/GoldActions";
 import NotFound from "./pages/OtherPage/NotFound";
 import BasicTables from "./pages/Tables/BasicTables";
+import { TransactionsPage } from "./pages/Transactioons";
 import Alerts from "./pages/UiElements/Alerts";
 import Avatars from "./pages/UiElements/Avatars";
 import Badges from "./pages/UiElements/Badges";
@@ -33,6 +34,7 @@ export default function App() {
           <Route element={<AppLayout />}>
             <Route index element={<Home />} path="/" />
             <Route index element={<UsersPage />} path="/users" />
+            <Route index element={<TransactionsPage />} path="/transactions" />
             <Route index element={<GoldActions />} path="/gold-actions" />
             <Route index element={<GoldHistory />} path="/gold-history" />
 
