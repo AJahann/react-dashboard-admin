@@ -50,10 +50,7 @@ const navItems: NavItem[] = [
   {
     name: "Products",
     icon: <ShootingStarIcon />,
-    subItems: [
-      { name: "Products", path: "/products", pro: false },
-      { name: "Add product", path: "/products/add", pro: false },
-    ],
+    path: "/products",
   },
   {
     name: "About",

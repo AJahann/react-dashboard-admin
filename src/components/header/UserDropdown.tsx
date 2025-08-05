@@ -1,11 +1,8 @@
 import { useState } from "react";
-import { Link } from "react-router";
 
+import { useAuth } from "../../context/AuthContext";
 import { Dropdown } from "../ui/dropdown/Dropdown";
 import { DropdownItem } from "../ui/dropdown/DropdownItem";
-import { useAuth } from "../../context/AuthContext";
-import Buttons from "../../pages/UiElements/Buttons";
-import Button from "../ui/button/Button";
 
 export default function UserDropdown() {
   const { admin, logout } = useAuth();

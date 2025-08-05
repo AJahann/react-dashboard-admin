@@ -13,6 +13,7 @@ import Home from "./pages/Dashboard/Home";
 import FormElements from "./pages/Forms/FormElements";
 import { GoldActions, GoldHistory } from "./pages/GoldActions";
 import NotFound from "./pages/OtherPage/NotFound";
+import { ProductsPage } from "./pages/Products";
 import BasicTables from "./pages/Tables/BasicTables";
 import { TransactionsPage } from "./pages/Transactioons";
 import Alerts from "./pages/UiElements/Alerts";
@@ -37,6 +38,7 @@ export default function App() {
             <Route index element={<TransactionsPage />} path="/transactions" />
             <Route index element={<GoldActions />} path="/gold-actions" />
             <Route index element={<GoldHistory />} path="/gold-history" />
+            <Route index element={<ProductsPage />} path="/products" />
 
             {/* Others Page */}
             <Route element={<UserProfiles />} path="/profile" />
