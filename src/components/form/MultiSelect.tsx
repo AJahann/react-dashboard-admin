@@ -1,3 +1,5 @@
+/* eslint-disable @eslint-react/no-array-index-key */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import type React from "react";
 
 import { useState } from "react";
@@ -18,6 +20,7 @@ interface MultiSelectProps {
 const MultiSelect: React.FC<MultiSelectProps> = ({
   label,
   options,
+  // eslint-disable-next-line @eslint-react/no-unstable-default-props
   defaultSelected = [],
   onChange,
   disabled = false,

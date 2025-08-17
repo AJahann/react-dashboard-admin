@@ -46,6 +46,7 @@ const Switch: React.FC<SwitchProps> = ({
         };
 
   return (
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
     <label
       onClick={handleToggle} // Toggle when the label itself is clicked
       className={`flex cursor-pointer select-none items-center gap-3 text-sm font-medium ${

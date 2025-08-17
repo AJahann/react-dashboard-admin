@@ -181,6 +181,7 @@ export default function BasicTableOne() {
                     {order.team.images.map((teamImage, index) => (
                       <div
                         className="w-6 h-6 overflow-hidden border-2 border-white rounded-full dark:border-gray-900"
+                        // eslint-disable-next-line @eslint-react/no-array-index-key
                         key={index}
                       >
                         <img

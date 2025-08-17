@@ -47,6 +47,7 @@ export default function DefaultInputs() {
             />
             <button
               className="absolute z-30 -translate-y-1/2 cursor-pointer right-4 top-1/2"
+              type="button"
               onClick={() => setShowPassword(!showPassword)}
             >
               {showPassword ? (
