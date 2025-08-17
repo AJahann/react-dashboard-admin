@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useMemo, useState } from "react";
 
 interface SidebarContextType {
   isExpanded: boolean;
@@ -62,21 +62,24 @@ export const SidebarProvider: React.FC<{ children: React.ReactNode }> = ({
     setOpenSubmenu((prev) => (prev === item ? null : item));
   };
 
+  const sidebarContextValue = useMemo(
+    () => ({
+      isExpanded: isMobile ? false : isExpanded,
+      isMobileOpen,
+      isHovered,
+      activeItem,
+      openSubmenu,
+      toggleSidebar,
+      toggleMobileSidebar,
+      setIsHovered,
+      setActiveItem,
+      toggleSubmenu,
+    }),
+    [activeItem, isExpanded, isHovered, isMobile, isMobileOpen, openSubmenu],
+  );
+
   return (
-    <SidebarContext.Provider
-      value={{
-        isExpanded: isMobile ? false : isExpanded,
-        isMobileOpen,
-        isHovered,
-        activeItem,
-        openSubmenu,
-        toggleSidebar,
-        toggleMobileSidebar,
-        setIsHovered,
-        setActiveItem,
-        toggleSubmenu,
-      }}
-    >
+    <SidebarContext.Provider value={sidebarContextValue}>
       {children}
     </SidebarContext.Provider>
   );
