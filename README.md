@@ -1,192 +1,119 @@
-# TailAdmin React - Free React Tailwind Admin Dashboard Template
+<a id="readme-top"></a>
 
-TailAdmin is a free and open-source admin dashboard template built on **React and Tailwind CSS**, providing developers
-with everything they need to create a comprehensive, data-driven back-end,
-dashboard, or admin panel solution for upcoming web projects.
+<div align="center">
+  <a href="https://github.com/AJahann/clone-goldika-2025">
+    <img src="https://raw.githubusercontent.com/AJahann/clone-goldika-2025/main/public/logo.png" alt="Logo" width="80" height="80">
+  </a>
 
-With TailAdmin, you get access to all the necessary dashboard UI components, elements, and pages required to build a
-feature-rich and complete dashboard or admin panel. Whether you're building dashboard or admin panel for a complex web
-application or a simple website, TailAdmin is the perfect solution to help you get up and running quickly.
+<h3 align="center">Goldika Admin Dashboard</h3>
 
-![TailAdmin React.js Dashboard Preview](./banner.png)
+  <p align="center">
+    Advanced administration panel for Goldika 2025 gold trading platform
+    <br />
+    <a href="https://github.com/AJahann/react-dashboard-admin"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    &middot;
+    <a href="https://github.com/AJahann/react-dashboard-admin/issues">Report Bug</a>
+    &middot;
+    <a href="https://github.com/AJahann/react-dashboard-admin/issues">Request Feature</a>
+  </p>
+</div>
 
-## Overview
+## About The Project
 
-TailAdmin provides essential UI components and layouts for building feature-rich, data-driven admin dashboards and
-control panels. It's built on:
+[![Admin Dashboard](https://raw.githubusercontent.com/AJahann/react-dashboard-admin/refs/heads/main/public/readme-image/Screenshot%202025-08-17%20150724.png)](https://github.com/AJahann/react-dashboard-admin)
+[![Gold Price Management](https://raw.githubusercontent.com/AJahann/react-dashboard-admin/refs/heads/main/public/readme-image/Screenshot%202025-08-17%20150753.png)](https://github.com/AJahann/react-dashboard-admin)
 
-- React 19
-- TypeScript
-- Tailwind CSS
+Customized TailAdmin-based dashboard for managing:
 
-### Quick Links
+- Real-time gold price updates
+- Bullion/coin inventory
+- User transactions
+- Financial reports
+- System configurations
 
-- [✨ Visit Website](https://tailadmin.com)
-- [📄 Documentation](https://tailadmin.com/docs)
-- [⬇️ Download](https://tailadmin.com/download)
-- [🖌️ Figma Design File (Community Edition)](https://www.figma.com/community/file/1214477970819985778)
-- [⚡ Get PRO Version](https://tailadmin.com/pricing)
+Key advantages:
 
-### Demos
+- Optimized for gold trading operations
+- Enhanced data visualization
+- Handle requests with react query / custom hooks
+- Seamless integration with Goldika API
 
-- [Free Version](https://free-react-demo.tailadmin.com/)
-- [Pro Version](https://react-demo.tailadmin.com)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Other Versions
+### Built With
 
-- [HTML Version](https://github.com/TailAdmin/tailadmin-free-tailwind-dashboard-template)
-- [Next.js Version](https://github.com/TailAdmin/free-nextjs-admin-dashboard)
-- [Vue.js Version](https://github.com/TailAdmin/vue-tailwind-admin-dashboard)
+[![React][React.js]][React-url] [![Vite][Vite.js]][Vite-url]
+[![Tailwind][Tailwind.js]][Tailwind-url]
+[![TanStack][Tanstack.js]][Tanstack-url]
+[![ApexCharts][Apexcharts.js]][Apexcharts-url] [![Zod][Zod.js]][Zod-url]
+[![FullCalendar][Fullcalendar.js]][Fullcalendar-url]
+[![ReactHookForm][Reacthookform.js]][Reacthookform-url]
 
-## Installation
+<!-- GETTING STARTED -->
 
-### Prerequisites
+## Getting Started
 
-To get started with TailAdmin, ensure you have the following prerequisites installed and set up:
+### Installation
 
-- Node.js 18.x or later (recommended to use Node.js 20.x or later)
-
-### Cloning the Repository
-
-Clone the repository using the following command:
-
-```bash
-git clone https://github.com/TailAdmin/free-react-tailwind-admin-dashboard.git
-```
-
-> Windows Users: place the repository near the root of your drive if you face issues while cloning.
-
-1. Install dependencies:
-
-   ```bash
-   npm install
-   # or
-   yarn install
+1. Clone the repo
+   ```sh
+   git clone https://github.com/AJahann/react-dashboard-admin.git
+   ```
+2. Navigate to admin directory
+   ```sh
+   cd react-dashboard-admin
+   ```
+3. Install dependencies
+   ```sh
+   pnpm install
+   ```
+4. Configure environment
+   ```sh
+   cp .env.example .env
+   ```
+5. Start development server
+   ```sh
+   pnpm run dev
    ```
 
-   > Use the `--legacy-peer-deps` flag, if you face issues while installing.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-2. Start the development server:
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
+<!-- CONTACT -->
 
-## Components
+## Contact
 
-TailAdmin is a pre-designed starting point for building a web-based dashboard using React.js and Tailwind CSS. The
-template includes:
+Ashkan - as6kan.developer@gmail.com
 
-- Sophisticated and accessible sidebar
-- Data visualization components
-- Prebuilt profile management and 404 page
-- Tables and Charts(Line and Bar)
-- Authentication forms and input elements
-- Alerts, Dropdowns, Modals, Buttons and more
-- Can't forget Dark Mode 🕶️
+Project Link:
+[https://github.com/AJahann/clone-goldika-2025](https://github.com/AJahann/clone-goldika-2025)
 
-All components are built with React and styled using Tailwind CSS for easy customization.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Feature Comparison
+<!-- MARKDOWN LINKS & IMAGES -->
 
-### Free Version
-
-- 1 Unique Dashboard
-- 30+ dashboard components
-- 50+ UI elements
-- Basic Figma design files
-- Community support
-
-### Pro Version
-
-- 5 Unique Dashboards: Analytics, Ecommerce, Marketing, CRM, Stocks (more coming soon)
-- 400+ dashboard components and UI elements
-- Complete Figma design file
-- Email support
-
-To learn more about pro version features and pricing, visit our [pricing page](https://tailadmin.com/pricing).
-
-## Changelog
-
-### Version 2.0.2 - [March 25, 2025]
-
-- Upgraded to React 19
-- Included overrides for packages to prevent peer dependency errors.
-- Migrated from react-flatpickr to flatpickr package for React 19 support
-
-### Version 2.0.1 - [February 27, 2025]
-
-#### Update Overview
-
-- Upgraded to Tailwind CSS v4 for better performance and efficiency.
-- Updated class usage to match the latest syntax and features.
-- Replaced deprecated class and optimized styles.
-
-#### Next Steps
-
-- Run npm install or yarn install to update dependencies.
-- Check for any style changes or compatibility issues.
-- Refer to the Tailwind CSS v4 [Migration Guide](https://tailwindcss.com/docs/upgrade-guide) on this release. if needed.
-- This update keeps the project up to date with the latest Tailwind improvements. 🚀
-
-### Version 2.0.0 - [February 2025]
-
-A major update with comprehensive redesign and modern React patterns implementation.
-
-#### Major Improvements
-
-- Complete UI redesign with modern React patterns
-- New features: collapsible sidebar, chat, and calendar
-- Improved performance and accessibility
-- Updated data visualization using ApexCharts
-
-#### Key Features
-
-- Redesigned dashboards (Ecommerce, Analytics, Marketing, CRM)
-- Enhanced navigation with React Router integration
-- Advanced tables with sorting and filtering
-- Calendar with drag-and-drop support
-- New UI components and improved existing ones
-
-#### Breaking Changes
-
-- Updated sidebar component API
-- Migrated charts to ApexCharts
-- Revised authentication system
-
-[Read more](https://tailadmin.com/docs/update-logs/react) on this release.
-
-### Version 1.3.7 - [June 20, 2024]
-
-#### Enhancements
-
-1. Remove Repetition of DefaultLayout in every Pages
-2. Add ClickOutside Component for reduce repeated functionality in Header Message, Notification and User Dropdowns.
-
-### Version 1.3.6 - [Jan 31, 2024]
-
-#### Enhancements
-
-1. Integrate flatpickr in [Date Picker/Form Elements]
-2. Change color after select an option [Select Element/Form Elements].
-3. Make it functional [Multiselect Dropdown/Form Elements].
-4. Make best value editable [Pricing Table One/Pricing Table].
-5. Rearrange Folder structure.
-
-### Version 1.2.0 - [Apr 28, 2023]
-
-- Add Typescript in TailAdmin React.
-
-### Version 1.0.0 - Initial Release - [Mar 13, 2023]
-
-- Initial release of TailAdmin React.
-
-## License
-
-TailAdmin React.js Free Version is released under the MIT License.
-
-## Support
-
-If you find this project helpful, please consider giving it a star on GitHub. Your support helps us continue developing
-and maintaining this template.
+[React.js]:
+  https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
+[Vite.js]:
+  https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white
+[Vite-url]: https://vitejs.dev/
+[Tailwind.js]:
+  https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white
+[Tailwind-url]: https://tailwindcss.com/
+[Tanstack.js]:
+  https://img.shields.io/badge/TanStack-FF4154?style=for-the-badge&logo=reactquery&logoColor=white
+[Tanstack-url]: https://tanstack.com/query
+[Apexcharts.js]:
+  https://img.shields.io/badge/ApexCharts-FF6384?style=for-the-badge&logo=apexcharts&logoColor=white
+[Apexcharts-url]: https://apexcharts.com/
+[Zod.js]:
+  https://img.shields.io/badge/Zod-1E4C6B?style=for-the-badge&logo=zod&logoColor=white
+[Zod-url]: https://zod.dev/
+[Fullcalendar.js]:
+  https://img.shields.io/badge/FullCalendar-2B5CD8?style=for-the-badge&logo=fullcalendar&logoColor=white
+[Fullcalendar-url]: https://fullcalendar.io/
+[Reacthookform.js]:
+  https://img.shields.io/badge/ReactHookForm-EC5990?style=for-the-badge&logo=reacthookform&logoColor=white
+[Reacthookform-url]: https://react-hook-form.com/
