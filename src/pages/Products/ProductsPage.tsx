@@ -5,6 +5,7 @@ import type { ProductDto } from "../../libs/data-layer/products";
 import { SmallLoadingSpinner } from "../../components/common/LoadingSpinner";
 import PageBreadcrumb from "../../components/common/PageBreadCrumb";
 import PageMeta from "../../components/common/PageMeta";
+import NotFountItem from "../../components/tables/NotFountItem";
 import Button from "../../components/ui/button/Button";
 import {
   Table,
@@ -151,6 +152,10 @@ export function ProductsPage() {
 
             <div className="max-w-full overflow-x-auto">
               <ProductsTable products={products} />
+
+              {products.length === 0 && (
+                <NotFountItem message="No Product Found" />
+              )}
             </div>
           </div>
         )}

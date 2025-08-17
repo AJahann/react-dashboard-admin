@@ -6,6 +6,7 @@ import { SmallLoadingSpinner } from "../../components/common/LoadingSpinner";
 import PageBreadcrumb from "../../components/common/PageBreadCrumb";
 import PageMeta from "../../components/common/PageMeta";
 import Pagination from "../../components/common/Pagination";
+import NotFountItem from "../../components/tables/NotFountItem";
 import Button from "../../components/ui/button/Button";
 import {
   Table,
@@ -151,6 +152,10 @@ export function UsersPage() {
 
               <div className="max-w-full overflow-x-auto">
                 <UsersTable users={users} />
+
+                {users.length === 0 && (
+                  <NotFountItem message="User Not Found" />
+                )}
               </div>
             </div>
 

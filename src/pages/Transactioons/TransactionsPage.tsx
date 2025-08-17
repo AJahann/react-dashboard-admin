@@ -4,6 +4,7 @@ import ComponentCard from "../../components/common/ComponentCard";
 import { SmallLoadingSpinner } from "../../components/common/LoadingSpinner";
 import PageBreadcrumb from "../../components/common/PageBreadCrumb";
 import PageMeta from "../../components/common/PageMeta";
+import NotFountItem from "../../components/tables/NotFountItem";
 import {
   Table,
   TableBody,
@@ -80,6 +81,10 @@ function TransactionsTable({ transactions }: TableProps) {
             ))}
           </TableBody>
         </Table>
+
+        {transactions.length === 0 && (
+          <NotFountItem message="No Transaction Yet..." />
+        )}
       </div>
     </div>
   );

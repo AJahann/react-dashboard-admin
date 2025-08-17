@@ -1,5 +1,6 @@
 import { useRecentOrders } from "../../libs/data-layer/orders";
 import { SmallLoadingSpinner } from "../common/LoadingSpinner";
+import NotFountItem from "../tables/NotFountItem";
 import {
   Table,
   TableBody,
@@ -125,6 +126,8 @@ const InfoTable = () => {
           ))}
         </TableBody>
       </Table>
+
+      {orders.length === 0 && <NotFountItem />}
     </div>
   );
 };

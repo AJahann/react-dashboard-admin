@@ -4,6 +4,7 @@ import ComponentCard from "../../components/common/ComponentCard";
 import { SmallLoadingSpinner } from "../../components/common/LoadingSpinner";
 import PageBreadcrumb from "../../components/common/PageBreadCrumb";
 import PageMeta from "../../components/common/PageMeta";
+import NotFountItem from "../../components/tables/NotFountItem";
 import {
   Table,
   TableBody,
@@ -74,6 +75,8 @@ function GoldHistoryTable({ history }: TableProps) {
             ))}
           </TableBody>
         </Table>
+
+        {history.length === 0 && <NotFountItem message="No history found" />}
       </div>
     </div>
   );
