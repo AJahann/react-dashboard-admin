@@ -1,5 +1,5 @@
-import { Link } from "react-router";
 import { useRecentOrders } from "../../libs/data-layer/orders";
+import { SmallLoadingSpinner } from "../common/LoadingSpinner";
 import {
   Table,
   TableBody,
@@ -7,7 +7,6 @@ import {
   TableHeader,
   TableRow,
 } from "../ui/table";
-import { SmallLoadingSpinner } from "../common/LoadingSpinner";
 
 function GoldSVG() {
   return (
