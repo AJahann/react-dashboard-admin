@@ -8,6 +8,7 @@ export default function SixteenIsToNine() {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
         frameBorder="0"
+        sandbox=""
       ></iframe>
     </div>
   );

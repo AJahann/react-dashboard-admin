@@ -4,6 +4,7 @@ import PageMeta from "../../components/common/PageMeta";
 import Badge from "../../components/ui/badge/Badge";
 import { PlusIcon } from "../../icons";
 
+// eslint-disable-next-line max-lines-per-function
 export default function Badges() {
   return (
     <div>

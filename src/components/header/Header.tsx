@@ -10,6 +10,7 @@ interface HeaderProps {
   onClick?: () => void; // Optional function that takes no arguments and returns void
   onToggle: () => void;
 }
+// eslint-disable-next-line max-lines-per-function
 const Header: React.FC<HeaderProps> = ({ onClick, onToggle }) => {
   const [isApplicationMenuOpen, setApplicationMenuOpen] = useState(false);
 
@@ -23,6 +24,7 @@ const Header: React.FC<HeaderProps> = ({ onClick, onToggle }) => {
         <div className="flex items-center justify-between w-full gap-2 px-3 py-3 border-b border-gray-200 dark:border-gray-800 sm:gap-4 lg:justify-normal lg:border-b-0 lg:px-0 lg:py-4">
           <button
             className="block w-10 h-10 text-gray-500 lg:hidden dark:text-gray-400"
+            type="button"
             onClick={onToggle}
           >
             {/* Hamburger Icon */}
@@ -60,6 +62,7 @@ const Header: React.FC<HeaderProps> = ({ onClick, onToggle }) => {
           </button>
           <button
             className="items-center justify-center hidden w-10 h-10 text-gray-500 border-gray-200 rounded-lg z-99 dark:border-gray-800 lg:flex dark:text-gray-400 lg:h-11 lg:w-11 lg:border"
+            type="button"
             onClick={onClick}
           >
             <svg
@@ -94,6 +97,7 @@ const Header: React.FC<HeaderProps> = ({ onClick, onToggle }) => {
 
           <button
             className="flex items-center justify-center w-10 h-10 text-gray-700 rounded-lg z-99 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800 lg:hidden"
+            type="button"
             onClick={toggleApplicationMenu}
           >
             <svg
@@ -115,7 +119,10 @@ const Header: React.FC<HeaderProps> = ({ onClick, onToggle }) => {
           <div className="hidden lg:block">
             <form action="https://formbold.com/s/unique_form_id" method="POST">
               <div className="relative">
-                <button className="absolute -translate-y-1/2 left-4 top-1/2">
+                <button
+                  className="absolute -translate-y-1/2 left-4 top-1/2"
+                  type="button"
+                >
                   <svg
                     height="20"
                     width="20"
@@ -138,7 +145,10 @@ const Header: React.FC<HeaderProps> = ({ onClick, onToggle }) => {
                   placeholder="Search or type command..."
                 />
 
-                <button className="absolute right-2.5 top-1/2 inline-flex -translate-y-1/2 items-center gap-0.5 rounded-lg border border-gray-200 bg-gray-50 px-[7px] py-[4.5px] text-xs -tracking-[0.2px] text-gray-500 dark:border-gray-800 dark:bg-white/[0.03] dark:text-gray-400">
+                <button
+                  className="absolute right-2.5 top-1/2 inline-flex -translate-y-1/2 items-center gap-0.5 rounded-lg border border-gray-200 bg-gray-50 px-[7px] py-[4.5px] text-xs -tracking-[0.2px] text-gray-500 dark:border-gray-800 dark:bg-white/[0.03] dark:text-gray-400"
+                  type="button"
+                >
                   <span> ⌘ </span>
                   <span> K </span>
                 </button>
